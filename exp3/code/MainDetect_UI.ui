@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1184</width>
+    <height>707</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_AftShow">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>10</y>
+      <width>571</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>输出实例</string>
+    </property>
+    <widget class="QLabel" name="label_AftPicShow">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>551</width>
+       <height>371</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_PreShow">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>571</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>输入实例</string>
+    </property>
+    <widget class="QLabel" name="label_PrePicShow">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>551</width>
+       <height>371</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>420</y>
+      <width>361</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>实验一</string>
+    </property>
+    <widget class="QLabel" name="label_datatype_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>色彩处理：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_ColorDeal">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>20</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>反色处理</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>灰值化</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Lab颜色模型</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>YCrCb颜色模型</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HSI颜色模型</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QSlider" name="slider_ImgSample">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>60</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+     <property name="tickInterval">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_datatype_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>采样间隔：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sample">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>60</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Agency FB</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slider_ImgQuanty">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>100</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="singleStep">
+      <number>5</number>
+     </property>
+     <property name="value">
+      <number>100</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+     <property name="tickInterval">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_datatype_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>量化范围：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_quanty">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>100</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Agency FB</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0-100</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_datatype">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>630</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>选择数据类型：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_SelectData">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>630</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>读入图像</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>读入本地视频</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>420</y>
+      <width>451</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>实验二</string>
+    </property>
+    <widget class="QSlider" name="slider_ImgZoom">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>30</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>-9</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="sliderPosition">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+     <property name="tickInterval">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_datatype_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>图像缩放：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_zoom">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>30</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Agency FB</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>1tms</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slider_ImgTranslation">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>70</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>-100</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="singleStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="sliderPosition">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+     <property name="tickInterval">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_datatype_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>图像平移：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_tanslation">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>70</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Agency FB</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0pix</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_ImgeMirroring">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>30</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>镜像变换</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slider_ImgRotate">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>100</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>-90</number>
+     </property>
+     <property name="maximum">
+      <number>90</number>
+     </property>
+     <property name="singleStep">
+      <number>10</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="sliderPosition">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+     <property name="tickInterval">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_datatype_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>图像旋转：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_rotate">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>100</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Agency FB</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>0°</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_CardCorrect">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>70</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>名片矫正</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_VideoDisplay">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>620</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>检测</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>420</y>
+      <width>221</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>实验三</string>
+    </property>
+    <widget class="QLabel" name="label_datatype_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>灰度变换：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_GrayDeal">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>线性变换</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>对数变换</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>指数变换</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>幂律变换</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pushButton_HistEqual">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>图像均衡</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_hist">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>110</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>直方图显示</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_datatype_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>图像平滑：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_ImgSmooth">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>60</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>邻域平均滤波</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>中值滤波</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1184</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboBox_SelectData</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onbuttonclick_selectDataType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>990</x>
+     <y>674</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>632</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_ColorDeal</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>oncombox_selectColorType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_ImgSample</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onslide_imgSample()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>562</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_ImgQuanty</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onslide_imgQuanty()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>564</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>678</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_ImgZoom</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onslide_imgZoom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>690</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>771</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_ImgTranslation</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onslide_imgTranslation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>620</x>
+     <y>534</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>773</x>
+     <y>565</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_ImgRotate</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onslide_imgRotation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>563</x>
+     <y>564</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>856</x>
+     <y>582</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_VideoDisplay</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onbuttonclick_videodisplay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1130</x>
+     <y>672</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1133</x>
+     <y>604</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_CardCorrect</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onbuttonclick_cardCrrection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>812</x>
+     <y>543</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>881</x>
+     <y>610</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_ImgeMirroring</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onbuttonclick_imgMirror()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>820</x>
+     <y>503</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>897</x>
+     <y>543</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_GrayDeal</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>oncombox_selectGrayDeal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>962</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>839</x>
+     <y>464</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_HistEqual</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onbutttonclick_histEqual()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>912</x>
+     <y>573</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>844</x>
+     <y>434</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_ImgSmooth</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>oncombox_selectConvType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>997</x>
+     <y>513</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1080</x>
+     <y>439</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>clicked()</signal>
+  <slot>onbuttonclick_picdetect()</slot>
+  <slot>onbuttonclick_videodetect()</slot>
+  <slot>onbuttonclick_selectDataType()</slot>
+  <slot>onbuttonclick_videodisplay()</slot>
+  <slot>onbuttonclick_videopause()</slot>
+  <slot>onbuttonclick_selectDetect()</slot>
+  <slot>oncombox_selectColorType()</slot>
+  <slot>onslide_imgSample()</slot>
+  <slot>onslide_imgQuanty()</slot>
+  <slot>onslide_imgZoom()</slot>
+  <slot>onslide_imgTranslation()</slot>
+  <slot>onslide_imgRotation()</slot>
+  <slot>onbuttonclick_cardCrrection()</slot>
+  <slot>onbuttonclick_imgMirror()</slot>
+  <slot>oncombox_selectGrayDeal()</slot>
+  <slot>onbutttonclick_histEqual()</slot>
+  <slot>oncombox_selectConvType()</slot>
+ </slots>
+</ui>
